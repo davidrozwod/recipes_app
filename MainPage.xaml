@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecipesApp.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+                 Order="Primary"
+                 Priority="0" 
+                 Clicked="OnButtonClick"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+    <StackLayout Margin="20,35,20,20">
+        <ListView x:Name="RecipesListView" ItemSelected="ListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                      <TextCell Text="{Binding Title}"  
+                                Detail="{Binding Creator}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

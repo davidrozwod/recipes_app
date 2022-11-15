@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecipesApp.ViewRecipe">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Edit"
+                 Order="Primary"
+                 Priority="0" 
+                 Clicked="OnButtonClick"/>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+    <StackLayout Margin="20,35,20,20">
+        <StackLayout>
+                        <Label Text="{Binding Title}"
+                               FontSize="Large"
+                               TextColor="Black"/>
+                        <Label Text= "{Binding Creator}"
+                               TextColor="Black"
+                               FontSize="Medium" />
+                        <Label Text="{Binding Ingredients}"
+                               TextColor="Black"
+                               FontSize="Small" />
+                        <Label Text="{Binding Steps}"
+                               TextColor="Black"
+                               FontSize="Small" />
+                        <Label Text="{Binding Notes}"
+                               TextColor="Black"
+                               FontSize="Small" />
+                    </StackLayout>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

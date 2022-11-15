@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecipesApp.EditRecipe">
+    <ContentPage.Content>
+        <StackLayout Padding="20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Title:" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+                <Editor Text="{Binding Title}" Grid.Row="0" Grid.Column="1" />
+                <Label Text="Creator:" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+                <Editor Text="{Binding Creator}" Grid.Row="1" Grid.Column="1" />
+                <Label Text="Ingredients:" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+                <Editor Text="{Binding Ingredients}" Grid.Row="2" Grid.Column="1" />
+                <Label Text="Steps:" Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+                <Editor Text="{Binding Steps}" Grid.Row="3" Grid.Column="1" />
+                <Label Text="Notes:" Grid.Row="4" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+                <Editor Text="{Binding Notes}" Grid.Row="4" Grid.Column="1" />
+            </Grid>
+            <Button Text="Save" HorizontalOptions="FillAndExpand" BackgroundColor="Blue" TextColor="White" Clicked="Save_Clicked" />
+            <Button Text="Delete" HorizontalOptions="FillAndExpand" BackgroundColor="Red" WidthRequest="160" TextColor="White" Clicked="Delete_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
